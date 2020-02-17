@@ -8,7 +8,7 @@ read -p "Enter the value of b :" number2
 read -p "Enter the value of c :" number3
 
 #ARITHMETIC OPERATION
-answer=$(echo "scale=2;$number1+$number2*$number3"|bc)
+answer=$(echo "scale=2;$number1*$number2+$number3"|bc)
 
 #DISPLAY THE RESULT
 echo $answer
