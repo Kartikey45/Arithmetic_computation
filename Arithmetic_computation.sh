@@ -39,7 +39,7 @@ for((index1=0; index1<$length; index1++))
 do
 	for((index2=$(($index1+1)); index2<$length; index2++))
 	do
-		if(( $( echo "${array[index1]} < ${array[index2]}" |bc -l ) ))
+		if(( $( echo "${array[index1]} > ${array[index2]}" |bc -l ) ))
 		then
 			temp=${array[index1]}
 			array[index1]=${array[index2]}
