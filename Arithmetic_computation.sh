@@ -21,5 +21,14 @@ answersDictionary[answer2]=$answer2
 answersDictionary[answer3]=$answer3
 answersDictionary[answer4]=$answer4
 
-#DISPLAY ANSWERS IN THE DICTIONARY
-echo "answers in the dictionary : ${answersDictionary[@]}"
+#READ VALUES FROM THE DICTIONARY INTO ARRAY
+echo "values of the dictionary:"
+for((index=0; index<${#answersDictionary[@]}; index++))
+do
+	array[$index]=${answersDictionary[answer$((index+1))]}
+done
+
+#DISPLAY THE VALUES OF ARRAY
+echo ${array[@]}
+
+
